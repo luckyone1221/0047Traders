@@ -1,10 +1,40 @@
 mixin headerBlock()
 	// start headerBlock
 	+b.headerBlock.section#headerBlock&attributes(attributes)
-		.container
-			+b.section-title.text-center
-				h2 headerBlock ds dfsdfdsfsd
-
-			.row
-						
+		+e.bg
+			+e.bg-img
+				img(loading="lazy" src="img/svg/header-block-bg.svg" alt="")
+		+e.container.container
+			+e.row.row
+				+e.txt-col.col-md-6.col-lg-5
+					+b.section-title.text-center.text-md-start
+						+e.pre-title Онлайн-тренинг Анны Зольд
+						h1
+							| Профессия
+							|
+							br.d-none.d-md-block
+							| форекс-
+							br.d-none.d-md-block
+							| трейдер 3.0
+						p
+							span
+								| С
+								|
+							span.text-primary
+								| $5
+								|
+							span
+								| до
+								|
+							span.text-primary
+								| $500
+								|
+							span за 30 рабочих дней.
+							br
+							span Пошаговый план новичка
+					+e.btn-cont.text-center.text-md-start
+						+e.btn(href='#') Запишитесь сейчас
+				+e.portrait-col.col-auto.col-md-6.col-lg-7
+					+pic('header-portrait.png')(class="headerBlock__portrait")
+					+pic('note-book.png')(class="headerBlock__notebook")
 	// end headerBlock

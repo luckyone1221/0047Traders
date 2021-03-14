@@ -251,33 +251,24 @@ function eventHandler() {
 	JSCCommon.animateScroll();
 
 	// JSCCommon.CustomInputFile(); 
-	var x = window.location.host;
-	let screenName;
-	screenName = document.body.dataset.bg;
+	let x = window.location.host;
+	let screenName = '01-1.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
 
-
-
-	function whenResize() {
-		let topNav = document.querySelector('.top-nav  ');
-		if (!topNav) return;
-		window.addEventListener('scroll', function (e) {
-			this.scrollY > 0
-				? topNav.classList.add('fixed')
-				: topNav.classList.remove('fixed');
-		}, { passive: true })
-
-	}
-
-	window.addEventListener('resize', () => {
-		whenResize();
-
-	}, { passive: true });
-
-	whenResize();
-
+	// let topNav = document.querySelector('.top-nav--js');
+	// let mainWrapper = document.querySelector('.main-wrapper');
+	// function changeMnu(){
+	// 	if (mainWrapper.scrollTop > 0){
+	// 		topNav.classList.add('fixed');
+	// 	}
+	// 	else{
+	// 		topNav.classList.remove('fixed');
+	// 	}
+	// }
+	// mainWrapper.addEventListener('scroll', changeMnu, {passive: true});
+	// changeMnu();
 
 	let defaultSl = {
 		spaceBetween: 0,
@@ -314,17 +305,15 @@ function eventHandler() {
 	});
 	// modal window
 
+	//luckyoneJs
+
+	//end luckyoneJs
+
+	//todo
+	//1 clean junk from js
 };
 if (document.readyState !== 'loading') {
 	eventHandler();
 } else {
 	document.addEventListener('DOMContentLoaded', eventHandler);
 }
-
-// window.onload = function () {
-// 	document.body.classList.add('loaded_hiding');
-// 	window.setTimeout(function () {
-// 		document.body.classList.add('loaded');
-// 		document.body.classList.remove('loaded_hiding');
-// 	}, 500);
-// }

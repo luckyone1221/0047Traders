@@ -3,6 +3,13 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug
+include ../blocks/sWhy/_sWhy.pug
+include ../blocks/sWho/_sWho.pug
+include ../blocks/sWhat/_sWhat.pug
+include ../blocks/sFamiliar/_sFamiliar.pug
+include ../blocks/sToday/_sToday.pug
+include ../blocks/sReal/_sReal.pug
+include ../blocks/sFor/_sFor.pug
 
 block variables
 	- let  mainPage= null 
@@ -12,13 +19,12 @@ block title
 	- let  title= 'title'
 	title= title
 block pagecontent
-
 	+mob-mnu()
 	+header()
-	+top-nav()
-	+soc()
-	+in-c("checkbox", "text") 
-	+b.tabs--js 
+		+top-nav()
+	//-+soc()
+	//+in-c("checkbox", "text")
+	//-+b.tabs--js
 		+e.caption.d-flex 
 			+e.btn.btn.btn-warning.active  btn1
 			+e.btn.btn.btn-warning btn 2
@@ -29,23 +35,19 @@ block pagecontent
 			+e.content content 2
 			+e.content content 3
 			+e.content content 4
-	+b.tabs--js 
-		+e.caption.d-flex 
-			+e.btn.btn.btn-success.active  btn  2 1
-			+e.btn.btn.btn-success btn 2  2
-			+e.btn.btn.btn-success btn 2  3
-			+e.btn.btn.btn-success btn  2 4
-		+e.wrap 
-			+e.content.active content 1
-			+e.content content 2
-			+e.content content 3
-			+e.content content 4
-
-	+topLine() 
 	+headerBlock()
+	+sWhy()
+	+sWho()
+	+b.gradinent-box
+		+e.bg
+			+e.bg-img
+				img(loading="lazy" src="img/svg/today-bg.svg" alt="")
+		+sWhat()
+		+sFamiliar()
+		+sToday()
+	+sReal()
+	+sFor()
+
 	+sForm()
 	+sContact()
 	+footer()
-
-
-	

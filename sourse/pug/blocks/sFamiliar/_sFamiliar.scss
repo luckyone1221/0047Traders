@@ -1,0 +1,75 @@
+// start .sFamiliar
+.sFamiliar {
+	@include media-breakpoint-up(xl){
+		--sPT: #{rem(49)};
+		--sTPB: #{rem(41)};
+		--sPB: #{rem(40)};
+	}
+	&__container{
+		@include media-breakpoint-up(xxl){
+			padding-right: rem(20);
+		}
+	}
+	.section-title{
+		h2{
+			&:after{
+				content: none;
+			}
+		}
+	}
+	&__row{
+		& > *{
+			margin-bottom: rem(40);
+		}
+		margin-bottom: rem(-40);
+
+		padding-bottom: rem(70);
+		@include media-breakpoint-up(xxl){
+			margin-left: -17px;
+			margin-right: -10px;
+			padding-bottom: rem(99);
+		}
+	}
+	&__col{
+		@include media-breakpoint-up(xl){
+			width: 20%;
+		}
+
+		display: flex;
+		align-items: center;
+		@include media-breakpoint-up(sm){
+			display: block;
+		}
+	}
+	&__img{
+		width: rem(62);
+		height: rem(62);
+
+		margin: 0 rem(50) 0 0;
+		@include media-breakpoint-up(sm){
+			margin: 0 auto rem(24) auto;
+		}
+	}
+	&__txt{
+		font-weight: 600;
+		font-size: rem(15.7);
+		line-height: 1.65;
+
+		text-align: left;
+		@include media-breakpoint-up(sm){
+			text-align: center;
+			max-width: rem(250px);
+			margin: 0 auto;
+		}
+		@include media-breakpoint-up(xl){
+			max-width: rem(198px);
+			margin: 0 auto;
+		}
+	}
+	&__truth{
+		font-weight: 600;
+		font-size: rem(23.7);
+	}
+	&__{}
+	&__{}
+} // end.sFamiliar

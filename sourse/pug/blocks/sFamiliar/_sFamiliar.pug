@@ -1,0 +1,29 @@
+mixin sFamiliar(data)
+	// start sFamiliar
+	+b.SECTION.sFamiliar.section#sFamiliar&attributes(attributes)
+		.container
+			+b.section-title
+				h2 Знакомо?
+			+e.row.row.justify-content-center
+				+familiarItem(1)
+					| Вам очень хочется начать зарабатывать на финансовых рынках, но каждый раз Вас пугают сложности
+				+familiarItem(2)
+					| Вам предлагают продвинутые инструменты для торговли и говорят с Вами слишком умными словами
+				+familiarItem(3)
+					| Жадность, страх и азарт берут верх и Вы «тонете»
+					|
+					br.d-none.d-xxl-block
+					| на психологии
+				+familiarItem(4)
+					| Даже если Вы немного заработали, то тут же снова теряете деньги
+				+familiarItem(5)
+					| Вам начинает казаться, что это удел избранных – зарабатывать на жизнь трейдингом.
+			+e.truth.text-center Отчасти это было правдой. Но не теперь!
+	// end sFamiliar
+
+mixin familiarItem(imgNum)
+	+e.col.col-12.col-sm-4.col-xl-auto
+		+e.img
+			img(loading="lazy" src=`img/svg/familiar-${imgNum}.svg` alt='')
+		+e.txt
+			block
