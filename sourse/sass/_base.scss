@@ -268,72 +268,52 @@ ul {
 	overflow: hidden;
 }
 
-
-
 .control-wrap {
 	position: relative;
 }
 
-.swiper-button-hand {
-	width: var(--swiperArrowSize);
-	height: var(--swiperArrowSize);
-	border-radius: 50%;
-	background-color: var(--swiperBgDef);
-	border: 2px solid var(--swiperBorderColorDef);
-	color: var(--swiperColorDef);
-	@include bgs;
-	z-index: 300;
-	outline: none !important;
-	// margin-bottom: 0;
-	background-image: none;
-	margin: 0;
-	@include a-cent(y);
-	box-shadow: 0 15px 60px rgba(0, 0, 0, 0.1);
-	@include mt;
-	user-select: none;
-
-	&:hover {
-		background-color: var(--swiperBgDefHover);
-		border-color: var(--swiperBorderColorDefHover);
-		color: var(--swiperColorDefHover);
-	}
-
-	.icon {
-		font-size: rem(12);
-	}
-
-	&::after {
-		display: none;
-	} 
-	&-next {
-		right: var(--swiperArrowPosition);
-	}
-
-	&-prev {
-		left: var(--swiperArrowPosition);
-	}
-}
-
 .swiper-pagination {
+	padding: rem(35) 0;
+	position: static;
 	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	text-align: center;
 
 	&-bullet {
-		opacity: 1;
+		flex-shrink: 0;
+		opacity: 1!important;
+		@include mt();
 		width: 8px;
 		height: 8px;
-		border-radius: 50%;
-		background-color: $secondary;
-		outline: none !important;
-		@include mt;
-		margin-left: rem(8);
-		// padding-right: rem(8);
-		margin-right: rem(5);
+		border-radius: 4px;
+		background-color: $gray-450!important;
+		outline: none!important;
 
-		&-active,
-		&:hover {
-			background-color: var(--bs-primary) ;
+		margin: rem(5) rem(20.36);
+		position: relative;
+		&:after{
+			content: '';
+			opacity: 0;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translateX(-50%) translateY(-50%);
+			width: rem(16.2);
+			height: rem(16.2);
+			border-radius: 50%;
+			background-color: $primary;
 		}
+		&:hover{
+			background-color: $primary!important;
+		}
+		&-active{
+			&:after{
+				opacity: 1;
+			}
+		}
+
 	}
 }
 
@@ -550,4 +530,54 @@ iframe {
 		font-size: rem(15.8);
 		line-height: 1.72;
 	}
+}
+//prev, next
+.swiper-prev,
+.swiper-next{
+	@include media-breakpoint-down(sm){
+		display: none;
+	}
+	position: absolute;
+	z-index: 10;
+	cursor: pointer;
+	padding: rem(10);
+	//border: none!important;
+	//box-shadow: none!important;
+	top: 50%;
+	transform: translateY(-50%);
+
+	@include mt();
+	.icon{
+		@include mt();
+		color: transparent;
+
+		stroke-width: 2px;
+		@include media-breakpoint-up(lg){
+			stroke-width: 1px;
+		}
+		stroke: $primary;
+		font-size: rem(40);
+	}
+
+	&:hover{
+		transform: translateY(-50%) scale(1.15);
+		.icon{
+			stroke-width: 2.5px;
+			@include media-breakpoint-up(lg){
+				stroke-width: 2px;
+			}
+		}
+	}
+
+	--side-distance: #{rem(3)};
+	@include media-breakpoint-up(lg){
+		--side-distance: #{rem(32)};
+	}
+}
+
+.swiper-next{
+	right: var(--side-distance);
+}
+.swiper-prev{
+	left: var(--side-distance);
 }

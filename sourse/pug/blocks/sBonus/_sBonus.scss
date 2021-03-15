@@ -1,0 +1,227 @@
+// start .sBonus
+.sBonus {
+	color: $white;
+	position: relative;
+	z-index: 1;
+	&__bg{
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, #FF4057 -0.54%, #240041 100%);
+		overflow: hidden;
+	}
+	&__bg-img{
+		position: absolute;
+		top: rem(216);
+		left: 0;
+		width: 100%;
+		height: auto;
+
+		img{
+			width: auto;
+			max-width: 100%;
+			height: auto;
+			@include media-breakpoint-up(xxl){
+				min-width: 100%;
+			}
+		}
+	}
+
+	--sPT: #{rem(80)};
+	--sPB: #{rem(80)};
+	@include media-breakpoint-up(xl){
+		--sPT: #{rem(91)};
+		--sTPB: #{rem(64)};
+		--sPB: #{rem(102px)};
+	}
+
+	.section-title{
+		max-width: rem(999);
+		h2{
+
+		}
+		p{
+			font-weight: 600;
+			font-size: rem(19.5);
+			line-height: 1.65;
+		}
+	}
+
+	&__container{
+		@include media-breakpoint-up(xxl){
+			padding-right: rem(23);
+		}
+	}
+
+	&__row{
+		@include roww(rem(30));
+		@include media-breakpoint-up(xxl){
+			@include roww(rem(40));
+		}
+
+		& > *{
+			margin-bottom: rem(30);
+		}
+		margin-bottom: rem(-30);
+
+		padding-bottom: rem(70);
+		@include media-breakpoint-up(lg){
+			padding-bottom: rem(145);
+		}
+	}
+	&__item{
+		min-height: 100%;
+		background: $white;
+		box-shadow: 0 rem(26) rem(46) rgba(0, 0, 0, 0.17);
+		border-radius: rem(8);
+		position: relative;
+		z-index: 1;
+
+		padding: rem(30) rem(20) rem(60);
+		@include media-breakpoint-up(sm){
+			padding: rem(40) rem(30);
+		}
+		@include media-breakpoint-up(lg){
+			padding: rem(36) rem(30) rem(230) rem(39);
+		}
+		@include media-breakpoint-up(xl){
+			min-height: #{'max(536px, 100%)'};
+			padding: rem(36) rem(30) rem(170) rem(39);
+		}
+	}
+	&__item-bg{
+		position: absolute;
+		z-index: -1;
+		bottom: -1px;
+		right: -1px;
+
+		height: calc(#{rem(240)} * 0.5);
+		width: calc(#{rem(310)} * 0.5);
+		@include media-breakpoint-up(sm){
+			height: calc(#{rem(240)} * 0.7);
+			width: calc(#{rem(310)} * 0.7);
+		}
+		@include media-breakpoint-up(md){
+			height: calc(#{rem(240)} * 0.9);
+			width: calc(#{rem(310)} * 0.9);
+		}
+		@include media-breakpoint-up(lg){
+			height: rem(240);
+			width: rem(310);
+		}
+
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-end;
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__title-row{
+		@include roww(0);
+
+		& > *{
+			margin-bottom: rem(10);
+		}
+		margin-bottom: rem(-10);
+		padding-bottom: rem(32);
+	}
+	&__title{
+		line-height: 1.26;
+		font-weight: 800;
+		color: $indigo;
+		margin-bottom: 0;
+	}
+	&__price{
+		font-size: rem(19.5);
+		line-height: 1.45;
+		text-decoration-line: line-through;
+		color: $indigo;
+		margin-bottom: rem(3);
+
+		@include media-breakpoint-up(lg){
+			padding-top: rem(11);
+			text-align: right;
+		}
+	}
+	&__free{
+		font-weight: 600;
+		font-size: rem(23.8);
+		line-height: 1.5;
+		color: $primary;
+		@include media-breakpoint-up(lg){
+			text-align: right;
+		}
+	}
+	&__txt-box{
+		font-weight: 500;
+		font-size: rem(15.7);
+		line-height: 1.75;
+		color: $indigo;
+
+		padding-right: rem(15);
+		@include media-breakpoint-up(sm){
+			padding-right: rem(150);
+		}
+		@include media-breakpoint-up(md){
+			padding-right: rem(200);
+		}
+		@include media-breakpoint-up(lg){
+			padding-right: rem(30);
+		}
+		@include media-breakpoint-up(xxl){
+			padding-right: rem(51);
+		}
+	}
+	&__det-row{
+		@include roww(rem(30));
+		@include media-breakpoint-up(xxl){
+			@include roww(rem(40));
+		}
+
+		& > *{
+			margin-bottom: rem(30);
+		}
+		margin-bottom: rem(-30);
+	}
+	&__det-title{
+		@include media-breakpoint-up(xxl){
+			padding-right: 0;
+		}
+		h2{
+			&:after{
+				content: '';
+				margin: rem(16) 0;
+				display: block;
+				width: rem(154);
+				height: 1px;
+				background: $primary;
+			}
+		}
+		p{
+			font-weight: 600;
+			font-size: rem(19.7);
+			line-height: 1.65;
+			color: $white;
+		}
+	}
+	&__video-box{
+		@include media-breakpoint-up(lg){
+			padding-top: rem(17px);
+		}
+	}
+	.video-box{
+		padding-top: (303/539) * 100%;
+		border-radius: rem(8);
+		overflow: hidden;
+	}
+
+	&__{}
+	&__{}
+} // end.sBonus

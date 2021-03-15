@@ -10,12 +10,32 @@ include components/img.pug
 include components/btn.pug
 
 
-mixin arrow()
-	.swiper-button-hand.swiper-button-hand-prev.swiper-button-prev
-		+icon('chevron-left')
-	.swiper-button-hand.swiper-button-hand-next.swiper-button-next
-		+icon('chevron-right')
+mixin arrow(className)
+	if className
+		.swiper-prev(class=`${className}-prev-js`)
+			+icon('chevron-left')
+		.swiper-next(class=`${className}-next-js`)
+			+icon('chevron-right')
+	else
+		.swiper-prev
+			+icon('chevron-left')
+		.swiper-next
+			+icon('chevron-right')
 //- /arrow for swiper-slider
+
+
+mixin carusel(...items)
+	+b.carusel-block
+		+e.slider--js.swiper-container
+			.swiper-wrapper
+				each item in items
+					.swiper-slide
+						a(href=`img/@2x/${item}.png` data-fslightbox="topSliderImgs" )
+							picture
+								source.swiper-lazy(type='image/webp' srcset="#" data-srcset=`img/@2x/webp/${item}.webp`)
+								img.swiper-lazy( data-src=`img/@2x/${item}.png` alt='')
+		+arrow
+		.swiper-pagination
 
 mixin ie11()
 	//- modernizer and for ie11

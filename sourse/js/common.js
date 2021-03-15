@@ -252,7 +252,7 @@ function eventHandler() {
 
 	// JSCCommon.CustomInputFile(); 
 	let x = window.location.host;
-	let screenName = '01-1.png';
+	let screenName = '01-1920.png';
 	if (screenName && x.includes("localhost:30")) {
 		document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
 	}
@@ -306,6 +306,32 @@ function eventHandler() {
 	// modal window
 
 	//luckyoneJs
+	$(".video-box__link").click(function () {
+		$(this).addClass("active").html($(this).data("src"))
+	})
+	//sliders
+	let sliders = document.querySelectorAll(".carusel-block");
+	for (let el of sliders){
+		let currSlider = new Swiper(el.querySelector('.carusel-block__slider--js'), {
+			slidesPerView: 'auto',
+			spaceBetween: 30,
+
+			lazy: {
+				loadPrevNext: true,
+			},
+			watchOverflow: true,
+
+			navigation: {
+				nextEl: el.querySelector('.swiper-next'),
+				prevEl: el.querySelector('.swiper-prev'),
+			},
+			pagination: {
+				el: el.querySelector('.swiper-pagination'),
+				type: 'bullets',
+				clickable: true,
+			},
+		});
+	}
 
 	//end luckyoneJs
 

@@ -1,0 +1,119 @@
+// start .sFear
+.sFear {
+	--sPB: #{rem(90)};
+	@include media-breakpoint-up(xl){
+		--sPT: #{rem(50)};
+		--sTPB: #{rem(89.5)};
+		--sPB: #{rem(154)};
+	}
+
+	.section-title{
+		h2{
+
+		}
+		p{
+			font-weight: 600;
+			font-size: rem(19.7);
+			line-height: 1.65;
+		}
+	}
+
+	&__container{
+		@include media-breakpoint-up(xxl){
+			padding-right: rem(23);
+		}
+	}
+	&__row{
+		@include roww(rem(0));
+		@include media-breakpoint-up(sm){
+			@include roww(rem(30));
+		}
+
+		& > *{
+			margin-bottom: rem(30);
+		}
+		margin-bottom: rem(-30);
+		@include media-breakpoint-up(sm){
+			& > *{
+				margin-bottom: rem(40);
+			}
+			margin-bottom: rem(-40);
+		}
+		@include media-breakpoint-up(xl){
+			& > *{
+				margin-bottom: rem(50);
+			}
+			margin-bottom: rem(-50);
+		}
+		@include media-breakpoint-up(xxl){
+			@include roww(rem(40));
+			& > *{
+				margin-bottom: rem(100);
+			}
+			margin-bottom: rem(-100);
+		}
+
+	}
+	&__col{
+		@include media-breakpoint-down(sm){
+			padding: rem(20) rem(15);
+			border-radius: rem(8);
+			border: 1px solid $gray-400;
+			box-shadow: 2px 2px 10px 0 rgba($black, .12);
+		}
+		@include media-breakpoint-up(sm){
+			display: flex;
+			align-items: flex-start;
+			text-align: left;
+		}
+		@include media-breakpoint-up(lg){
+			display: block;
+			text-align: center;
+		}
+	}
+	&__img{
+		flex-shrink: 0;
+		width: rem(64);
+		height: rem(64);
+
+		display: flex;
+		align-items: flex-start;
+
+		justify-content: flex-start;
+		margin: 0 0 rem(30) 0;
+		@include media-breakpoint-up(sm){
+			margin: rem(10) rem(40) 0 0;
+		}
+		@include media-breakpoint-up(lg){
+			justify-content: center;
+			margin: 0 auto rem(33.5) auto;
+		}
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	&__txt-cont{
+
+		h4{
+			font-weight: 600;
+			line-height: 1.55;
+			margin-bottom: rem(31);
+		}
+		p{
+			font-weight: 600;
+			font-size: rem(15.7);
+			line-height: 1.7;
+			color: $secondary;
+		}
+
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__{}
+	&__{}
+} // end.sFear

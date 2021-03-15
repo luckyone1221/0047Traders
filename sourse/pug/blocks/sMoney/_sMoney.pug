@@ -1,0 +1,115 @@
+mixin sMoney(data)
+	// start sMoney
+	+b.SECTION.sMoney.section#sMoney&attributes(attributes)
+		+e.container.container
+			+b.section-title
+				h2 А сколько я заработаю?
+				p Посмотрите на результаты торговли автора тренинга. Когда Вы пройдёте тренинг и начнёте использовать полученную систему заработка, Ваши результаты могут приблизиться к этим цифрам.
+			+e.items
+				+moneyItem(1)
+					h3
+						span
+							| Видео-пример:
+							|
+						span.text-primary
+							| +$5.172
+							|
+						span за 1 день
+					p В течение дня Анна периодически записывает на видео сделки, которые совершает. В этом ролике наглядно показан обычный торговый день:
+				+moneyItem(2)
+					h3
+						| Видео-пример:
+						|
+						span.text-danger
+							| +$1.447
+							|
+						span за 1 час
+					p В течение дня Анна периодически записывает на видео сделки, которые совершает. В этом ролике показаны сделки всего за 1 час:
+				+moneyItem(3)
+					h3
+						| Видео-пример:
+						|
+						span.text-danger
+							| +$6.050,40
+							|
+						| за 2 дня
+					p Анна периодически записывает на видео сделки, которые совершает. В этом ролике показаны сделки за 2 дня:
+			+e.H3.slider-title Галерея примеров сделок
+			+b.carusel-block
+				+e.slider--js.swiper-container
+					.swiper-wrapper
+						+moneySlide(1)
+							| С $71,96 до
+							|
+							span.text-primary
+								| $648,29
+								|
+							| (в 9 раз!) за 2 недели:
+						//-
+						+moneySlide(2)
+							| С $1.090,70 до
+							|
+							span.text-primary
+								| $23.821,75
+								|
+							| (в 22 раза!!) за 2 недели:
+						+moneySlide(3)
+							| С $2.843,52 до
+							|
+							span.text-primary
+								| $96.995,43
+								|
+							| (в 34 раза!!!) за 2 месяца:
+						+moneySlide(4)
+							span.text-primary
+								| $2.288
+								|
+							| за 3 дня в серии сделок:
+						+moneySlide(5)
+							span.text-primary
+								| $2.364
+								|
+							| в одной сделке:
+						+moneySlide(6)
+							sapn.text-primary
+								| $3.049
+								|
+							| в одной сделке:
+						+moneySlide(7)
+							span.text-primary
+								| $4.113,40
+								|
+							| в одной сделке:
+						+moneySlide(8)
+							span.text-primary
+								| $2.402
+								|
+							| в одной сделке:
+					+arrow()
+				.swiper-pagination
+			+e.btn-cont.text-center
+				+e.btn(href='#') Хочу такие же результаты
+	// end sMoney
+
+mixin moneySlide(item)
+	.swiper-slide
+		+e.title
+			block
+		+e.link(href=`img/@2x/income-slide-${item}.png` data-fslightbox="topSliderImgs" )
+			picture
+				source.swiper-lazy(type='image/webp' srcset="#" data-srcset=`img/@2x/webp/income-slide-${item}.webp`)
+				img.swiper-lazy( data-src=`img/@2x/income-slide-${item}.png` alt='')
+
+
+mixin moneyItem(imgNum, a='458067420')
+	+e.item
+		+e.title
+			block
+		+e.video-cont
+			+videoLink(a)
+				+pic(`how-much-${imgNum}.png`)
+
+mixin videoLink(a='458067420')
+	+b.video-box
+		+e.link(data-src=`<iframe src="https://player.vimeo.com/video/${a}?autoplay=1&loop=1&autopause=0" loading="lazy" width="800" height="450" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>`)
+			block

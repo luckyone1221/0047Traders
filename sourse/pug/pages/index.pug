@@ -10,6 +10,11 @@ include ../blocks/sFamiliar/_sFamiliar.pug
 include ../blocks/sToday/_sToday.pug
 include ../blocks/sReal/_sReal.pug
 include ../blocks/sFor/_sFor.pug
+include ../blocks/sFear/_sFear.pug
+include ../blocks/sProgramm/_sProgramm.pug
+include ../blocks/sAuthor/_sAuthor.pug
+include ../blocks/sMoney/_sMoney.pug
+include ../blocks/sBonus/_sBonus.pug
 
 block variables
 	- let  mainPage= null 
@@ -47,6 +52,11 @@ block pagecontent
 		+sToday()
 	+sReal()
 	+sFor()
+	+sFear()
+	+sProgramm()
+	+sAuthor()
+	+sMoney()
+	+sBonus()
 
 	+sForm()
 	+sContact()
