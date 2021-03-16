@@ -1,0 +1,91 @@
+// start .sImpress
+.sImpress {
+	--sPT: #{rem(60)};
+	--sPB: #{rem(80px)};
+	@include media-breakpoint-up(sm){
+		--sPT: #{rem(80)};
+		--sPB: #{rem(120px)};
+	}
+	@include media-breakpoint-up(lg){
+		--sPT: #{rem(90)};
+		--sPB: #{rem(150px)};
+	}
+	@include media-breakpoint-up(xxl){
+		--sPT: #{rem(168)};
+		--sTPB: #{rem(45)};
+		--sPB: #{rem(222px)};
+	}
+
+	position: relative;
+	z-index: 1;
+	color: $white;
+	&__bg{
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(90deg, #FF4057 -0.54%, #240041 100%);
+	}
+	&__bg-img{
+		position: absolute;
+		top: rem(-35);
+		@include media-breakpoint-up(md){
+			top: rem(-90);
+		}
+		@include media-breakpoint-up(xl){
+			top: rem(-113);
+		}
+		left: 0;
+
+		img{
+			width: 100%;
+			min-width: rem(600);
+			height: auto;
+		}
+	}
+
+	.section-title{
+		max-width: rem(880);
+		h2{
+			max-width: rem(940);
+			@include media-breakpoint-up(xl){
+				font-size: rem(49.4);
+			}
+		}
+		p{
+			//max-width: rem(999);
+			font-weight: 600;
+			font-size: rem(19.6);
+			line-height: 1.65;
+			margin-bottom: rem(31);
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__container{
+		@include media-breakpoint-up(xxl){
+			padding-right: rem(23);
+		}
+	}
+	&__btn{
+		@extend .btn;
+		@extend .btn-warning;
+		color: $white!important;
+
+		width: rem(430);
+		max-width: 100%;
+
+		box-shadow: 0px rem(26px) rem(46px) rgba(0, 0, 0, 0.17)!important;
+		&:hover{
+			box-shadow: 0px rem(26px) rem(46px) rgba(0, 0, 0, 0.20)!important;
+		}
+		&:focus{
+			box-shadow: 0px rem(26px) rem(46px) rgba(0, 0, 0, 0.20)!important;
+		}
+	}
+	&__{}
+} // end.sImpress

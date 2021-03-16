@@ -1,0 +1,71 @@
+// start .sTeam
+.sTeam {
+	@include media-breakpoint-up(xl){
+		--sPT: #{rem(91px)};
+		--sTPB: #{rem(63)};
+		--sPB: #{rem(36px)};
+	}
+
+	.section-title{
+		h2{
+			max-width: rem(940);
+			@include media-breakpoint-up(xl){
+				font-size: rem(49.4);
+			}
+		}
+		p{
+			//max-width: rem(999);
+			font-weight: 600;
+			font-size: rem(19.6);
+			line-height: 1.65;
+			margin-bottom: rem(31);
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__container{
+		@include media-breakpoint-up(xxl){
+			padding-right: rem(23);
+		}
+	}
+
+	&__row{
+		@include roww(rem(30));
+		@include media-breakpoint-up(xl){
+			@include roww(rem(40));
+		}
+
+		& > *{
+			margin-bottom: rem(30);
+		}
+		margin-bottom: rem(-30);
+	}
+	&__col{
+
+	}
+	&__portrait{
+		@extend .accept-ratio-frame-nh;
+		padding-top: (288/248) * 100%;
+		box-shadow: 0 26px 46px rgba(0, 0, 0, 0.17);
+		border-radius: rem(8);
+		margin-bottom: rem(26.5);
+	}
+	&__name{
+		font-weight: 600;
+		font-size: rem(19.7);
+		line-height: 1.65;
+		color: $indigo;
+		margin-bottom: rem(10);
+	}
+	&__duty{
+		font-weight: 500;
+		font-size: rem(15.7);
+		line-height: 1.75;
+		color: $secondary;
+	}
+	//
+	&__{}
+	&__{}
+} // end.sTeam

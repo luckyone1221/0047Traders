@@ -1,0 +1,91 @@
+// start .sWarranty
+.sWarranty {
+	@include media-breakpoint-up(xl){
+		--sPT: #{rem(60px)};
+		--sTPB: #{rem(90.5)};
+		--sPB: #{rem(36px)};
+	}
+
+	.section-title{
+		h2{
+			max-width: rem(940);
+			@include media-breakpoint-up(xl){
+				font-size: rem(49.4);
+			}
+		}
+		p{
+			max-width: rem(1070);
+			font-weight: 600;
+			font-size: rem(19.6);
+			line-height: 1.65;
+			margin-bottom: rem(31);
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__container{
+		@include media-breakpoint-up(xxl){
+			padding-right: rem(23);
+		}
+	}
+
+	&__row{
+		@include roww(rem(30));
+		@include media-breakpoint-up(xl){
+			@include roww(rem(40));
+		}
+
+		& > *{
+			margin-bottom: rem(30);
+		}
+		margin-bottom: rem(-30);
+	}
+	&__item{
+		background: $white;
+		box-shadow: 0 26px 46px rgba(0, 0, 0, 0.17);
+		border-radius: rem(20);
+
+		position: relative;
+		z-index: 1;
+		&:after{
+			content: '';
+			position: absolute;
+			z-index: -1;
+			top: rem(-8);
+			right: rem(-8);
+
+			width: rem(64);
+			height: rem(64);
+
+			background-image: url(../img/svg/warranty-ball.svg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+
+		padding: rem(30) rem(20) rem(35);
+		@include media-breakpoint-up(sm){
+			padding: rem(30) rem(30) rem(40);
+		}
+		@include media-breakpoint-up(xl){
+			padding: rem(33) rem(31.5) rem(36);
+		}
+	}
+	&__title{
+		font-weight: bold;
+		font-size: rem(19.5);
+		line-height: 1.65;
+		color: $indigo;
+		margin-bottom: rem(15);
+	}
+	&__txt{
+		font-weight: 500;
+		font-size: rem(15.7);
+		line-height: 1.75;
+		color: $indigo;
+	}
+	&__{}
+	&__{}
+} // end.sWarranty

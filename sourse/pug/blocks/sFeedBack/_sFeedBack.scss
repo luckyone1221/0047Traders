@@ -1,0 +1,161 @@
+// start .sFeedBack
+.sFeedBack {
+	@include media-breakpoint-up(xl){
+		--sPT: #{rem(96)};
+		--sTPB: #{rem(69)};
+		--sPB: #{rem(40)};
+	}
+
+	.section-title{
+		h2{
+			@include media-breakpoint-up(xl){
+				font-size: rem(49.2);
+				margin-right: rem(-10);
+			}
+		}
+		p{
+			//max-width: rem(999);
+			font-weight: 600;
+			font-size: rem(19.6);
+			line-height: 1.65;
+			margin-bottom: rem(31);
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__container{
+		@include media-breakpoint-up(xxl){
+			padding-right: rem(23);
+		}
+	}
+
+	&__items{
+
+	}
+	&__item{
+		background: $white;
+		border-radius: rem(8);
+
+		margin-bottom: rem(35);
+		@include media-breakpoint-up(xxl){
+			margin-bottom: 65px;
+		}
+
+		&:last-child{
+			margin-bottom: 0;
+		}
+
+		padding: rem(30) rem(20);
+		@include media-breakpoint-up(sm){
+			padding: rem(40) rem(30);
+		}
+		@include media-breakpoint-up(xl){
+			padding: rem(38) rem(64) rem(34) rem(32);
+		}
+		&--txt{
+			@include media-breakpoint-up(xl){
+				padding: rem(38px) rem(40) rem(56) rem(32);
+			}
+		}
+	}
+	&__row{
+		@include roww(rem(30));
+		@include media-breakpoint-up(xl){
+			@include roww(rem(40));
+		}
+
+		& > *{
+			margin-bottom: rem(30);
+		}
+
+		margin-bottom: rem(-30);
+		padding-bottom: rem(24);
+
+		.video-box{
+			padding-top: (9/16) * 100%;//?
+			@include media-breakpoint-up(xxl){
+				padding-top: 65%;//?
+			}
+		}
+	}
+	&__portrait{
+		@include media-breakpoint-up(lg){
+			margin-top: rem(9);
+		}
+		width: rem(216);
+		height: rem(272);
+
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+	&__t-name{
+		font-weight: 800;
+		font-size: rem(29.5);
+		line-height: 1.45;
+		margin-bottom: rem(24);
+	}
+	&__t-txt{
+		font-size: rem(19.7);
+		line-height: 1.75;
+		p{
+			margin-bottom: rem(34);
+		}
+		ul{
+			padding: 0;
+			margin: 0 0 rem(33);
+			list-style: none;
+			li{
+				&:before{
+					content: '-';
+					margin-right: rem(5);
+				}
+			}
+		}
+
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+	}
+	//
+	&__title-col{
+		@include media-breakpoint-up(xl){
+			padding-left: rem(35);
+		}
+	}
+	&__name{
+		font-weight: 800;
+		font-size: rem(29.6);
+		line-height: 1.45;
+		color: $primary;
+	}
+	&__txt{
+		font-weight: 800;
+		font-size: rem(29.6);
+		line-height: 1.45;
+
+		@include media-breakpoint-up(xl){
+			max-width: rem(312);
+		}
+	}
+	&__txt-box{
+		font-size: rem(19.7);
+		line-height: 1.75;
+		p{
+			margin-bottom: rem(30);
+		}
+
+		& > *:last-child{
+			margin-bottom: 0;
+		}
+	}
+	&__{}
+} // end.sFeedBack
+
+.gray-box{
+	background: linear-gradient(105.02deg, #ECECEC 0%, #FAFAFA 0.01%, #E6E6E6 100%), #CED7DA;
+}

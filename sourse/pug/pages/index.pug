@@ -17,6 +17,12 @@ include ../blocks/sMoney/_sMoney.pug
 include ../blocks/sBonus/_sBonus.pug
 include ../blocks/sVersion/_sVersion.pug
 include ../blocks/sCouch/_sCouch.pug
+include ../blocks/sFeedBack/_sFeedBack.pug
+include ../blocks/sSlider/_sSlider.pug
+include ../blocks/sImpress/_sImpress.pug
+include ../blocks/sTeam/_sTeam.pug
+include ../blocks/sWarranty/_sWarranty.pug
+
 
 block variables
 	- let  mainPage= null 
@@ -61,6 +67,12 @@ block pagecontent
 	+sBonus()
 	+sVersion()
 	+sCouch()
+	+b.gray-box
+		+sFeedBack()
+		+sSlider()
+	+sImpress()
+	+sTeam()
+	+sWarranty()
 
 	+sForm()
 	+sContact()

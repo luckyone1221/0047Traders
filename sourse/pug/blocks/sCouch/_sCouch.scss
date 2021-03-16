@@ -1,9 +1,12 @@
 // start .sCouch
 .sCouch {
+	@include media-breakpoint-up(lg){
+		--sPB: #{rem(100)};
+	}
 	@include media-breakpoint-up(xl){
 		--sPT: #{rem(45)};
 		--sTPB: #{rem(69)};
-		--sPB: #{rem(102px)};
+		--sPB: #{rem(176px)};
 	}
 
 	.section-title{
