@@ -179,6 +179,7 @@ function eventHandler() {
 	}
 
 	makeDDGroup(['.sQuestions-dd-js']); //end luckyoneJs
+	//"jquery": "^3.5.1",
 }
 
 ;

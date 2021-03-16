@@ -8,7 +8,9 @@ mixin sAuthor(data)
 						+b.section-title
 							h2 Кто автор
 							p Анна Зольд – успешный форекс-трейдер и&#160;талантливый преподаватель.
-						+pic('author-portrait.png')(class="sAuthor__portrait")
+						+e.portrait
+							img(loading="lazy" src="img/@2x/author-portrait.png" alt="")
+						//+pic('author-portrait.png')(class="sAuthor__portrait")
 					+e.txt-col.col-md-6.col-lg-6
 						ul
 							li

@@ -95,7 +95,7 @@ mixin moneySlide(item)
 	.swiper-slide
 		+e.title
 			block
-		+e.link(href=`img/@2x/income-slide-${item}.png` data-fslightbox="topSliderImgs" )
+		+e.link(href=`img/@2x/income-slide-${item}.png` data-fancybox="moneyImg")
 			picture
 				source.swiper-lazy(type='image/webp' srcset="#" data-srcset=`img/@2x/webp/income-slide-${item}.webp`)
 				img.swiper-lazy( data-src=`img/@2x/income-slide-${item}.png` alt='')
