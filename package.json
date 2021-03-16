@@ -59,7 +59,6 @@
   },
   "dependencies": {
     "@fancyapps/fancybox": "^3.5.7",
-    "inputmask": "^5.0.5",
     "loading-attribute-polyfill": "^1.5.4",
     "swiper": "^5.4.5"
   }

@@ -11,7 +11,8 @@ mixin sSlider(data)
 							.swiper-slide
 								a(href=`img/@2x/look-item-${i}.png` data-fancybox="feedBackSlider")
 									picture
-										source.swiper-lazy(type='image/webp' srcset="#" data-srcset=`img/@2x/webp/look-item-${i}.webp`)
+										source.swiper-lazy(type='image/webp' srcset="#" data-srcset=`img/@2x/webp/look-item-${i}.webp` media="(min-width: 576px)")
+										source.swiper-lazy(type='image/webp' srcset="#" data-srcset=`img/@1x/webp/look-item-${i}.webp` media="(max-width: 575px)")
 										img.swiper-lazy( data-src=`img/@2x/look-item-${i}.png` alt='')
 					+arrow()
 				.swiper-pagination

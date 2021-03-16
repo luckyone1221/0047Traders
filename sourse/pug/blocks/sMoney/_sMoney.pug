@@ -97,7 +97,8 @@ mixin moneySlide(item)
 			block
 		+e.link(href=`img/@2x/income-slide-${item}.png` data-fancybox="moneyImg")
 			picture
-				source.swiper-lazy(type='image/webp' srcset="#" data-srcset=`img/@2x/webp/income-slide-${item}.webp`)
+				source.swiper-lazy(type='image/webp' srcset="#" data-srcset=`img/@2x/webp/income-slide-${item}.webp` media="(min-width: 576px)")
+				source.swiper-lazy(type='image/webp' srcset="#" data-srcset=`img/@1x/webp/income-slide-${item}.webp` media="(max-width: 575px)")
 				img.swiper-lazy( data-src=`img/@2x/income-slide-${item}.png` alt='')
 
 

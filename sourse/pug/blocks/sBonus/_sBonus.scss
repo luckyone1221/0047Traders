@@ -99,18 +99,18 @@
 		right: -1px;
 
 		height: calc(#{rem(240)} * 0.5);
-		width: calc(#{rem(310)} * 0.5);
+		width: calc(#{rem(350)} * 0.5);
 		@include media-breakpoint-up(sm){
 			height: calc(#{rem(240)} * 0.7);
-			width: calc(#{rem(310)} * 0.7);
+			width: calc(#{rem(350)} * 0.7);
 		}
 		@include media-breakpoint-up(md){
 			height: calc(#{rem(240)} * 0.9);
-			width: calc(#{rem(310)} * 0.9);
+			width: calc(#{rem(350)} * 0.9);
 		}
 		@include media-breakpoint-up(lg){
 			height: rem(240);
-			width: rem(310);
+			width: rem(350);
 		}
 
 		display: flex;
