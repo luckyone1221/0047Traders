@@ -76,16 +76,6 @@ var JSCCommon = {
 		}, {
 			passive: true
 		});
-	},
-	animateScroll: function animateScroll() {
-		$(document).on('click', " .top-nav li a, .scroll-link", function () {
-			var elementClick = $(this).attr("href");
-			var destination = $(elementClick).offset().top;
-			$('html, body').animate({
-				scrollTop: destination
-			}, 1100);
-			return false;
-		});
 	}
 };
 var $ = jQuery;
@@ -93,14 +83,7 @@ var $ = jQuery;
 function eventHandler() {
 	JSCCommon.ifie();
 	JSCCommon.mobileMenu();
-	JSCCommon.heightwindow();
-	JSCCommon.animateScroll(); // let x = window.location.host;
-	// let screenName = '01-1920.png';
-	// if (screenName && x.includes("localhost:30")) {
-	// 	document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
-	// }
-	// modal window
-	//luckyoneJs
+	JSCCommon.heightwindow(); //luckyoneJs
 
 	$(".video-box__link").click(function () {
 		$(this).addClass("active").html($(this).data("src"));

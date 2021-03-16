@@ -2,13 +2,13 @@
 mixin mnu()
 	-
 		var nav= {
-			"О тренинге":"#",
-			"Программа":"#",
-			"Результаты":"#",
-			"Отзывы":"#",
+			"О тренинге":"#sReal",
+			"Программа":"#sProgramm",
+			"Результаты":"#sMoney",
+			"Отзывы":"#sFeedBack",
 			}
 	+b.UL.navMenu
 		each linkPatch, linkName in nav
 			+e.LI.item: +e.A.link(href=linkPatch)= linkName
-		+e.LI.item: +e.A.link(href="#") Цена
+		+e.LI.item: +e.A.link(href="#sVersion") Цена
 //- /menu

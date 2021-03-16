@@ -17,6 +17,8 @@ mixin sVersion(data)
 					addClasses: 'gray',
 					oldPrice: '33 000',
 					price: '23 100',
+					href: "https://info-dvd.ru/bbm/order/fxtrader2"
+
 				})
 					li Вводный курс для абсолютных новичков
 					li 6 онлайн-занятий тренинга
@@ -28,6 +30,7 @@ mixin sVersion(data)
 					addClasses: 'pink',
 					oldPrice: '33 000',
 					price: '23 100',
+					href: "https://info-dvd.ru/bbm/order/fxtrader2master"
 				})
 					li Вводный курс для абсолютных новичков
 					li 6 онлайн-занятий тренинга
@@ -40,6 +43,7 @@ mixin sVersion(data)
 					addClasses: 'gradient',
 					oldPrice: '33 000',
 					price: '23 100',
+					href: "https://info-dvd.ru/bbm/order/fxtrader2coaching"
 				})
 					li 6 недель тренинга (18 занятий)
 					li Записи всех занятий
@@ -57,7 +61,7 @@ mixin sVersion(data)
 						p Мы определили для каждого пакета участия максимально возможный общий лимит мест: 50 для версии Стандарт, 50 для версии Мастер и 20 для версии Коучинг.
 						p Регистрация на тренинг закончится, как только будут заняты все свободные места. Успевайте!
 					+e.big Выписанный счёт не гарантирует Вам участие в тренинге по текущей цене. Место на тренинге бронируется за Вами только после оплаты!
-					+e.b-btn(href='#') Успейте получить ссылку
+					+e.b-btn(href='#sVersion') Успейте получить ссылку
 	// end sVersion
 
 mixin versionItem(data)
@@ -71,4 +75,4 @@ mixin versionItem(data)
 				ul
 					block
 				+e.btn-content.text-center
-					+e.btn(href='#') Оформить заказ
+					+e.btn(href=data.href target="_blank") Оформить заказ

@@ -53,16 +53,6 @@ const JSCCommon = {
 			document.documentElement.style.setProperty('--vh', `${vh}px`);
 		}, { passive: true });
 	},
-	animateScroll() {
-		$(document).on('click', " .top-nav li a, .scroll-link", function () {
-			const elementClick = $(this).attr("href");
-			const destination = $(elementClick).offset().top;
-
-			$('html, body').animate({ scrollTop: destination }, 1100);
-
-			return false;
-		});
-	},
 };
 const $ = jQuery;
 
@@ -70,13 +60,6 @@ function eventHandler() {
 	JSCCommon.ifie();
 	JSCCommon.mobileMenu();
 	JSCCommon.heightwindow();
-	JSCCommon.animateScroll();
-	// let x = window.location.host;
-	// let screenName = '01-1920.png';
-	// if (screenName && x.includes("localhost:30")) {
-	// 	document.body.insertAdjacentHTML("beforeend", `<div class="pixel-perfect" style="background-image: url(screen/${screenName});"></div>`);
-	// }
-	// modal window
 
 	//luckyoneJs
 	$(".video-box__link").click(function () {
