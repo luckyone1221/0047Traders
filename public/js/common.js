@@ -296,15 +296,56 @@ function eventHandler() {
 					clickable: true
 				}
 			});
-		} //end luckyoneJs
-		//todo
-		//1 clean junk from js
-
+		}
 	} catch (err) {
 		_iterator.e(err);
 	} finally {
 		_iterator.f();
 	}
+
+	function makeDDGroup(qSelecorts) {
+		var _iterator2 = _createForOfIteratorHelper(qSelecorts),
+				_step2;
+
+		try {
+			for (_iterator2.s(); !(_step2 = _iterator2.n()).done;) {
+				var parentSelect = _step2.value;
+				var parent = document.querySelector(parentSelect);
+
+				if (parent) {
+					(function () {
+						// childHeads, kind of funny))
+						var ChildHeads = parent.querySelectorAll('.dd-head-js');
+						$(ChildHeads).click(function () {
+							var clickedHead = this;
+							$(ChildHeads).each(function () {
+								if (this === clickedHead) {
+									//parent element gain toggle class, style head change via parent
+									$(this.parentElement).toggleClass('active');
+									$(this.parentElement).find('.dd-content-js').slideToggle(function () {
+										$(this).toggleClass('active');
+									});
+								} else {
+									$(this.parentElement).removeClass('active');
+									$(this.parentElement).find('.dd-content-js').slideUp(function () {
+										$(this).removeClass('active');
+									});
+								}
+							});
+						});
+					})();
+				}
+			}
+		} catch (err) {
+			_iterator2.e(err);
+		} finally {
+			_iterator2.f();
+		}
+	}
+
+	makeDDGroup(['.sQuestions-dd-js']); //end luckyoneJs
+	//todo
+	//1 clean junk from js
 }
 
 ;

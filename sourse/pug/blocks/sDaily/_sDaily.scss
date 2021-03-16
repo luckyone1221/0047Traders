@@ -1,0 +1,99 @@
+// start .sDaily
+.sDaily {
+	position: relative;
+	z-index: 1;
+	&:before{
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: $gray-240;
+	}
+	@include media-breakpoint-up(xl){
+		--sPT: #{rem(99px)};
+		--sTPB: #{rem(53)};
+		--sPB: #{rem(88px)};
+	}
+
+	.section-title{
+		h2{
+			max-width: rem(1070);
+			@include media-breakpoint-up(xl){
+				font-size: rem(49.6);
+			}
+		}
+		p{
+			max-width: rem(1070);
+			font-weight: 600;
+			font-size: rem(19.6);
+			line-height: 1.65;
+			margin-bottom: rem(31);
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__container{
+		@include media-breakpoint-up(xxl){
+			padding-right: rem(23);
+		}
+	}
+	&__bold{
+		max-width: rem(1020);
+
+		font-weight: 800;
+		font-size: rem(29.6);
+
+		margin-bottom: rem(35);
+		@include media-breakpoint-up(xl){
+			margin-bottom: rem(53);
+		}
+		line-height: 1.45;
+		color: $indigo;
+	}
+	&__box{
+		text-align: center;
+		background-color: $white;
+		border-radius: rem(8);
+		padding: rem(28) rem(96);
+		margin-bottom: rem(48);
+
+		font-weight: 600;
+		font-size: rem(23.7);
+		line-height: 1.55;
+	}
+	//
+	&__bot-row{
+		text-align: center;
+		@include media-breakpoint-up(lg){
+			text-align: left;
+		}
+
+		@include roww(rem(32));
+
+		& > *{
+			margin-bottom: rem(20);
+		}
+		margin-bottom: rem(-20);
+	}
+	&__txt-col{
+		font-weight: 600;
+		font-size: rem(19.7);
+		line-height: 1.65;
+	}
+	&__btn-col{
+
+	}
+	&__btn{
+		@extend .btn-default;
+
+		width: rem(447);
+		max-width: 100%;
+	}
+	&__{}
+	&__{}
+} // end.sDaily

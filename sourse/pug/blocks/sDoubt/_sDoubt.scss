@@ -1,0 +1,71 @@
+// start .sDoubt
+.sDoubt {
+	@include media-breakpoint-up(xl){
+		--sPT: #{rem(30px)};
+		--sTPB: #{rem(12)};
+		--sPB: #{rem(92px)};
+	}
+
+	.section-title{
+		h2{
+			max-width: rem(1025);
+			@include media-breakpoint-up(xl){
+				font-size: rem(49.6);
+			}
+		}
+		p{
+			max-width: rem(1070);
+			font-weight: 600;
+			font-size: rem(19.6);
+			line-height: 1.65;
+			margin-bottom: rem(31);
+			&:last-child{
+				margin-bottom: 0;
+			}
+		}
+	}
+
+	&__container{
+		@include media-breakpoint-up(xxl){
+			padding-right: rem(23);
+		}
+	}
+	&__row{
+		@include media-breakpoint-only(md){
+			align-items: flex-end;
+		}
+		@include roww(rem(30));
+		@include media-breakpoint-up(xl){
+			@include roww(rem(48));
+		}
+
+		& > *{
+			margin-bottom: rem(30);
+		}
+		margin-bottom: rem(-30);
+	}
+	&__txt-col{
+		@include media-breakpoint-up(xl){
+			padding-top: rem(62);
+		}
+		font-size: rem(19.6);
+		line-height: 1.75;
+		p{
+			margin-bottom: rem(35);
+		}
+	}
+	&__man{
+		display: block;
+		width: 100%;
+		height: auto;
+
+		img{
+			width: auto;
+			height: auto;
+			max-width: 100%;
+		}
+	}
+
+	&__{}
+	&__{}
+} // end.sDoubt

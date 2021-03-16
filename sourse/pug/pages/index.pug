@@ -22,6 +22,10 @@ include ../blocks/sSlider/_sSlider.pug
 include ../blocks/sImpress/_sImpress.pug
 include ../blocks/sTeam/_sTeam.pug
 include ../blocks/sWarranty/_sWarranty.pug
+include ../blocks/sLevel/_sLevel.pug
+include ../blocks/sQuestions/_sQuestions.pug
+include ../blocks/sDoubt/_sDoubt.pug
+include ../blocks/sDaily/_sDaily.pug
 
 
 block variables
@@ -73,7 +77,8 @@ block pagecontent
 	+sImpress()
 	+sTeam()
 	+sWarranty()
-
-	+sForm()
-	+sContact()
+	+sLevel()
+	+sQuestions()
+	+sDoubt()
+	+sDaily()
 	+footer()
